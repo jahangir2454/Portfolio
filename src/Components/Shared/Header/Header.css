@@ -17,6 +17,7 @@
   width: 100%;
   backdrop-filter: blur(5px);
   transition: 0.5s ease-in-out;
+  z-index: 100;
 }
 .header-content {
   display: flex;

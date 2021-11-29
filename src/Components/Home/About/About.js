@@ -1,9 +1,14 @@
 import { Container, Box, Grid } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./About.css";
 import aboutImg from "../../img/jebin.png";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <Box
       sx={{
@@ -18,7 +23,7 @@ const About = () => {
         <Box sx={{ pt: 5 }}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={5}>
-              <Box className="about-img">
+              <Box data-aos="fade-right" className="about-img">
                 <img
                   style={{ width: "100%", height: "100%" }}
                   src={aboutImg}
@@ -27,7 +32,7 @@ const About = () => {
               </Box>
             </Grid>
             <Grid item xs={12} sm={7}>
-              <Box className="about-text">
+              <Box data-aos="fade-left" className="about-text">
                 <h6>VISIT MY PORTFOLIO & HIRE ME</h6>
                 <h2>About Me</h2>
                 <p>

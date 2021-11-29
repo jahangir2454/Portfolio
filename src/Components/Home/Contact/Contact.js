@@ -1,8 +1,13 @@
+import React, { useEffect } from "react";
 import { Container, Box, Typography, Grid } from "@mui/material";
-import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Contact.css";
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <Box
       sx={{
@@ -21,6 +26,7 @@ const Contact = () => {
             spacing={2}
           >
             <Grid
+              data-aos="fade-up"
               sx={{
                 display: "flex",
                 justifyContent: "center",
@@ -59,7 +65,7 @@ const Contact = () => {
         </Box>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={5}>
-            <Box className="contact-text">
+            <Box data-aos="fade-up" className="contact-text">
               <img
                 src="https://inbio-react.netlify.app/static/5930a183f9be0c913e9d25b1318416f9/3a710/contact1.webp"
                 alt=""
@@ -137,7 +143,7 @@ const Contact = () => {
             </Box>
           </Grid>
           <Grid item xs={12} sm={7}>
-            <Box className="contact">
+            <Box data-aos="fade-left" className="contact">
               <Box>
                 <form>
                   <label htmlFor="name">Your Name </label>

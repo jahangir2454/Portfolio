@@ -1,18 +1,22 @@
+import React, { useEffect } from "react";
 import { Container, Box, Grid } from "@mui/material";
-import React from "react";
 import { Typewriter } from "react-simple-typewriter";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Banner.css";
 import banner from "../../img/jebin.png";
 
 const Banner = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <Box className="banner">
       <Container>
         <Box>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={7}>
-              <Box className="banner-heading">
+              <Box data-aos="fade-up" className="banner-heading">
                 <h4>WELCOME TO MY WORLD</h4>
                 <h2>
                   Hi, I’m <span>JAHANGIR ALAM</span>
@@ -23,7 +27,7 @@ const Banner = () => {
                     <Typewriter
                       loop
                       cursor
-                      cursorStyle="..."
+                      cursorStyle=".."
                       typeSpeed={100}
                       deleteSpeed={50}
                       delaySpeed={1000}
@@ -65,6 +69,7 @@ const Banner = () => {
             </Grid>
             <Grid item xs={12} sm={5}>
               <Box
+                data-aos="fade-left"
                 style={{
                   background: `url(${banner})`,
                   backgroundPosition: "left",
