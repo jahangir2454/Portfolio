@@ -1,7 +1,10 @@
-import { Container, Box, Typography, Grid } from "@mui/material";
+import { Container, Box, Grid } from "@mui/material";
 import React from "react";
+import { Typewriter } from "react-simple-typewriter";
+
 import "./Banner.css";
 import banner from "../../img/jebin.png";
+
 const Banner = () => {
   return (
     <Box className="banner">
@@ -14,7 +17,24 @@ const Banner = () => {
                 <h2>
                   Hi, I’m <span>JAHANGIR ALAM</span>
                 </h2>
-                <h3>a Developer</h3>
+                <h3>
+                  A
+                  <span>
+                    <Typewriter
+                      loop
+                      cursor
+                      cursorStyle="..."
+                      typeSpeed={100}
+                      deleteSpeed={50}
+                      delaySpeed={1000}
+                      words={[
+                        " Developer .",
+                        " Professional coder .",
+                        " Designer .",
+                      ]}
+                    />
+                  </span>
+                </h3>
                 <p>
                   I use animation as a third dimension by which to simplify
                   experiences and kuiding thro each and every interaction. I’m
