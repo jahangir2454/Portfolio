@@ -17,6 +17,13 @@ const Banner = () => {
           <Grid container spacing={2}>
             <Grid item xs={12} sm={7}>
               <Box data-aos="fade-up" className="banner-heading">
+                <Box>
+                  <Box sx={{ my: 1 }} className="banner-user">
+                    <Box className="banner-user-icon">
+                      <i className="far fa-user"></i>
+                    </Box>
+                  </Box>
+                </Box>
                 <h4>WELCOME TO MY WORLD</h4>
                 <h2>
                   Hi, I’m <span>JAHANGIR ALAM</span>

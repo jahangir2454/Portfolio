@@ -84,3 +84,24 @@
   color: #ffff;
   transform: translatey(-9px);
 }
+.banner-user {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #4d1d30;
+  padding: 10px;
+}
+.banner-user-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #c90a45;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.banner-user-icon i {
+  color: #fff;
+  font-size: 20px;
+}

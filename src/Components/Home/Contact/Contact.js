@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Container, Box, Typography, Grid } from "@mui/material";
+import emailjs from "emailjs-com";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Contact.css";
@@ -8,6 +9,27 @@ const Contact = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
+  // form
+  const submit = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_h32exwm",
+        "template_a0vxweb",
+        e.target,
+        "user_NBL2BCzdTrKwJ1FGJrTo3"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <Box
       sx={{
@@ -145,17 +167,17 @@ const Contact = () => {
           <Grid item xs={12} sm={7}>
             <Box data-aos="fade-left" className="contact">
               <Box>
-                <form>
+                <form onSubmit={submit}>
                   <label htmlFor="name">Your Name </label>
                   <br />
-                  <input type="text" /> <br />
+                  <input type="text" name="name" /> <br />
                   <label htmlFor="name">Email</label> <br />
-                  <input type="text" /> <br />
+                  <input type="email" required name="email" /> <br />
                   <label htmlFor="name">subject</label> <br />
-                  <input type="text" /> <br />
+                  <input type="text" name="subject" /> <br />
                   <label htmlFor="name">Your Message</label> <br />
-                  <textarea type="text" />
-                  <button className="send-btn">
+                  <textarea type="text" name="message" />
+                  <button type="submit" className="send-btn">
                     SEND MESSAGE <i className="fas fa-paper-plane"></i>
                   </button>
                 </form>
