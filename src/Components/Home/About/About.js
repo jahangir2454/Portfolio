@@ -11,6 +11,7 @@ const About = () => {
   }, []);
   return (
     <Box
+      className="about-section"
       sx={{
         background: "#212428",
         py: 3,

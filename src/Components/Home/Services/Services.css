@@ -1,0 +1,76 @@
+.services {
+  background: #212428;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: 1;
+}
+.services-card {
+  background: #1f2125;
+  border: 1px solid #2e3035;
+  border-radius: 5px;
+  box-shadow: 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
+  padding: 25px 20px;
+  transition: 0.5s ease-in-out;
+  margin: 10px;
+}
+.services-card:hover {
+  transform: translatey(-8px);
+}
+.services-card img {
+  height: 40px;
+  width: 40px;
+  color: #fff;
+}
+.about-icon-card {
+  height: 70px;
+  width: 70px;
+  padding: 15px;
+  border-radius: 50%;
+  background: #4d1d30;
+}
+.about-icon {
+  height: 100%;
+  width: 100%;
+  background: #c90a45;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow {
+  color: #c90a45;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  line-height: 40px;
+  cursor: pointer;
+}
+.prev {
+  bottom: -4%;
+  left: 48%;
+  z-index: 10;
+}
+.next {
+  bottom: -4%;
+  right: 47%;
+  z-index: 10;
+}
+.arrows-bg {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #1f2125;
+  border: 1px solid #2e3035;
+  box-shadow: 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
+  position: absolute;
+  font-size: 20px;
+  z-index: 50;
+  transition: 0.5s ease-in-out;
+}
+.arrows-bg:hover {
+  transform: translateY(-6px);
+  color: #fff;
+}
+.services-container {
+  padding: 30px;
+}

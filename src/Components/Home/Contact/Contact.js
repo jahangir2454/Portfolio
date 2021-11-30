@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { Container, Box, Typography, Grid } from "@mui/material";
 import emailjs from "emailjs-com";
 import AOS from "aos";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "aos/dist/aos.css";
 import "./Contact.css";
 
@@ -28,6 +30,15 @@ const Contact = () => {
         }
       );
     e.target.reset();
+    toast.dark("🦄 Successfully Send Message !", {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   return (
@@ -170,16 +181,17 @@ const Contact = () => {
                 <form onSubmit={submit}>
                   <label htmlFor="name">Your Name </label>
                   <br />
-                  <input type="text" name="name" /> <br />
+                  <input required type="text" name="name" /> <br />
                   <label htmlFor="name">Email</label> <br />
                   <input type="email" required name="email" /> <br />
                   <label htmlFor="name">subject</label> <br />
-                  <input type="text" name="subject" /> <br />
+                  <input required type="text" name="subject" /> <br />
                   <label htmlFor="name">Your Message</label> <br />
-                  <textarea type="text" name="message" />
+                  <textarea required type="text" name="message" />
                   <button type="submit" className="send-btn">
                     SEND MESSAGE <i className="fas fa-paper-plane"></i>
                   </button>
+                  <ToastContainer />
                 </form>
               </Box>
             </Box>
