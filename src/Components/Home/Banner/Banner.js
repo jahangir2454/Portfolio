@@ -11,11 +11,14 @@ const Banner = () => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <Box className="banner">
+    <Box id="home" className="banner">
       <Container>
         <Box>
+          <Box className="banner-res">
+            <img src={banner} alt="" />
+          </Box>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={7}>
+            <Grid item xs={12} sm={6} md={7}>
               <Box data-aos="fade-up" className="banner-heading">
                 <Box>
                   <Box sx={{ my: 1 }} className="banner-user">
@@ -47,10 +50,9 @@ const Banner = () => {
                   </span>
                 </h3>
                 <p>
-                  I use animation as a third dimension by which to simplify
-                  experiences and kuiding thro each and every interaction. I’m
-                  not adding motion just to spruce things up, but doing it in
-                  ways that.
+                  I am a frontend Developer. I have aquire the knowledge of MERN
+                  STACK and aquiring knowledge day by day. I am very passionate
+                  about my work
                 </p>
                 <Box className="social-icon-card">
                   <p>FIND WITH ME</p>
@@ -74,7 +76,7 @@ const Banner = () => {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={5}>
+            <Grid item xs={12} sm={5} md={5}>
               <Box
                 data-aos="fade-left"
                 style={{

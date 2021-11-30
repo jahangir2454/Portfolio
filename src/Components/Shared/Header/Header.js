@@ -1,11 +1,15 @@
 import { Container, Box, Typography } from "@mui/material";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { HashLink } from "react-router-hash-link";
 import img from "../../img/jahangir.png";
+import pdf from "../../img/jahangir.pdf";
 import "./Header.css";
 
 const Header = () => {
   const [header, setHeader] = useState(false);
+  const [bars, setBars] = useState(false);
 
   window.onscroll = () => {
     if (window.scrollY > 120) {
@@ -13,6 +17,21 @@ const Header = () => {
     } else {
       setHeader(false);
     }
+  };
+  const hendlebars = () => {
+    bars ? setBars(false) : setBars(true);
+  };
+
+  const downresume = () => {
+    toast.dark("🦄 Successfully Download Resume !", {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   return (
@@ -25,15 +44,52 @@ const Header = () => {
               JAHANGIR
             </Typography>
           </Box>
-          <Box className="nav-menu">
+          <Box className={bars ? "nav-menu2" : "nav-menu"}>
             <ul>
-              <Link to="">Home</Link>
-              <Link to="">Features</Link>
-              <Link to="">Pricing</Link>
-              <Link className="resume" to="">
+              <HashLink smooth to="/home#home">
+                Home
+              </HashLink>
+              <HashLink smooth to="/home#services">
+                Services
+              </HashLink>
+              <HashLink smooth to="/home#about">
+                About Me
+              </HashLink>
+              <HashLink smooth to="/home#projects">
+                Projects
+              </HashLink>
+              <HashLink smooth to="/home#contact">
+                Contact
+              </HashLink>
+              <a
+                onClick={downresume}
+                className="resume"
+                href={pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+              >
                 Resume
-              </Link>
+              </a>
+              <ToastContainer />
             </ul>
+          </Box>
+          <a
+            onClick={downresume}
+            className="resume2"
+            href={pdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
+            Resume
+          </a>
+          <Box className="header-bars">
+            {!bars ? (
+              <i onClick={hendlebars} class="fas fa-bars"></i>
+            ) : (
+              <i onClick={hendlebars} className="fas fa-times"></i>
+            )}
           </Box>
         </Box>
       </Container>

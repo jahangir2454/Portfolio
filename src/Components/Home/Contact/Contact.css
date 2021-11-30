@@ -70,3 +70,110 @@
   color: #ff014f !important;
   cursor: pointer;
 }
+.contact-heading p {
+  color: #f9004d;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+.contact-heading h3 {
+  color: #c4cfde;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 0;
+  margin: 0;
+}
+.contact-text h2 {
+  color: #f9004d;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
+}
+.contact-text h5 {
+  color: #c4cfde;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
+}
+.contact-text h6 {
+  color: #878e99;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
+}
+.contact-text p {
+  color: #c4cfde;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+@media (min-width: 220px) and (max-width: 680px) {
+  .contact-heading h3 {
+    font-size: 30px;
+  }
+  .contact-text h2 {
+    font-size: 25px;
+  }
+  .contact-heading p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 100px) and (max-width: 300px) {
+  .contact-heading h3 {
+    font-size: 20px;
+  }
+  .contact-heading p {
+    font-size: 12px;
+  }
+}
+
+/* 
+
+
+sx={{
+                  color: "#f9004d",
+                  fontSize: "35px",
+                  fontWeight: "500",
+                  letterSpacing: "1px",
+                  py: 1,
+                }}
+                variant="h2"
+
+
+
+                sx={{
+                  fontSize: "25px",
+                  color: "#c4cfde",
+                  fontWeight: "500",
+                  letterSpacing: "1px",
+                }}
+                variant="h5"
+
+
+
+
+
+                 sx={{
+                  color: "#878e99",
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  py: 1,
+                }}
+                variant="h6"
+
+
+
+                
+
+sx={{ color: "#c4cfde", fontSize: "18px" }}
+                variant="h5"
+
+*/
