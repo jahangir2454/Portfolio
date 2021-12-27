@@ -34,13 +34,12 @@
   height: 50px;
   width: 50px;
   border-radius: 50px;
+  margin-right: 15px;
 }
 
 .header-text {
-  color: #c5d0de;
+  color: #ff014f;
   font-size: 20px;
-  margin-left: 10px;
-  letter-spacing: 1px;
 }
 /* nav part start */
 .nav-menu2 a,

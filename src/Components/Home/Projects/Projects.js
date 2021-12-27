@@ -8,29 +8,42 @@ import project from "../../img/bikes-clubs.png";
 import project2 from "../../img/health.png";
 import project3 from "../../img/travel.png";
 import project4 from "../../img/bitcoin.png";
-import { Link } from "react-router-dom";
+import project5 from "../../img/Bion.png";
+import project6 from "../../img/Europa-sounds.png";
 
 const projects = [
   {
     id: 1,
+    img: project6,
+    liveLink: "https://jahangiralam245424.netlify.app/",
+    codeLink: "https://github.com/jahangir2454/Europa-Sounds",
+  },
+  {
+    id: 2,
+    img: project5,
+    liveLink: "https://jahangiralam.netlify.app/",
+    codeLink: "https://github.com/jahangir2454/Bion-coin",
+  },
+  {
+    id: 3,
     img: project,
     liveLink: "https://bikes-clubs.web.app/",
     codeLink: "https://github.com/jahangir2454/Bike-Club",
   },
   {
-    id: 2,
+    id: 4,
     img: project2,
     liveLink: "https://family-health-care-f1f0b.web.app/home",
     codeLink: "https://github.com/jahangir2454/Health-Care",
   },
   {
-    id: 3,
+    id: 5,
     img: project3,
     liveLink: "https://travelapp-c4cfa.web.app/home",
     codeLink: "https://github.com/jahangir2454/TRAVESIA",
   },
   {
-    id: 4,
+    id: 6,
     img: project4,
     liveLink: "https://keen-keller-1b0f76.netlify.app/",
     codeLink: "https://github.com/jahangir2454/bitcoin",

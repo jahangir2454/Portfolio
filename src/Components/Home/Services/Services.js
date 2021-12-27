@@ -6,42 +6,46 @@ import "aos/dist/aos.css";
 import "./Services.css";
 import services1 from "../../img/client.png";
 import services2 from "../../img/hello.png";
+import portfolio from "../../img/portfolio.png";
+import code from "../../img/code.png";
+import finish from "../../img/finish.png";
+import drawing from "../../img/drawing.png";
 
 const services = [
   {
     id: 1,
     icon: services1,
-    name: "Responsive Design",
-    des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis",
-  },
-  {
-    id: 3,
-    icon: services1,
-    name: "Responsive Design",
+    name: "RESPONSIVE DESIGN",
     des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis",
   },
   {
     id: 3,
     icon: services2,
-    name: "Responsive Design",
+    name: "FAST SUPPORT",
+    des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis",
+  },
+  {
+    id: 3,
+    icon: portfolio,
+    name: "USER EXPERIIENCE",
     des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis",
   },
   {
     id: 4,
-    icon: services1,
-    name: "Responsive Design",
+    icon: code,
+    name: "CLEAN CODE",
     des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis",
   },
   {
     id: 5,
-    icon: services2,
-    name: "Responsive Design",
+    icon: drawing,
+    name: "CREATIVE DESIGN",
     des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis",
   },
   {
-    icon: services2,
+    icon: finish,
     id: 6,
-    name: "Responsive Design",
+    name: "BRANDING",
     des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis",
   },
 ];
